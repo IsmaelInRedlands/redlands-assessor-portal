@@ -1,0 +1,117 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-27T17:18:39.930Z",
+  "item": {
+    "title": "Redlands Assessor Portal"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "map",
+    "showHeader": true,
+    "theme": {
+      "mode": "light",
+      "accent": "default"
+    },
+    "layout": {
+      "left": {
+        "hidden": false,
+        "width": "340px",
+        "title": "Property Search",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "assessor-search-panel"
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "default-home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "default-scale-bar",
+        "type": "scaleBar",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "assessor-portal-look",
+        "label": "Assessor portal search panel with parcel highlight",
+        "bundlePath": "./runtime/behaviors/assessor-portal-look-b9660f8777572148.js",
+        "sourceSha256": "b9660f8777572148e998abe16ed46a77357efac460381431b4a4a8c176e6dac1",
+        "modulePaths": [],
+        "config": {
+          "layerId": "1a17e5f8bd5-layer-2"
+        },
+        "mounts": [
+          "assessor-search-panel"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-27T17:39:17.806Z"
+      },
+      {
+        "id": "hide-search-hint",
+        "label": "Remove search hint text",
+        "bundlePath": "./runtime/behaviors/hide-search-hint-237ec9603ccac907.js",
+        "sourceSha256": "237ec9603ccac90713e43f7af05945791a7ff0b89e33f4563487553d0367fd91",
+        "modulePaths": [],
+        "config": {},
+        "mounts": [
+          "assessor-search-panel"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-27T17:40:38.523Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "1008eca0-a9dc-48f3-8e15-204e17a50837",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-0c47fe9f-69a2-4c89-a0b5-1f4348e2a69d",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-27T17:18:39.927Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "arcgis-nova-deployable-app",
+  "version": "0.1",
+  "generatedAt": "2026-10-27T17:18:39.927Z",
+  "title": "Redlands Assessor Portal",
+  "authMode": "oauth",
+  "entry": "index.html",
+  "sourceAppPath": "outputs/apps/2026-10-27T17-18-39-1008eca0-a9dc-48f3-8e15-204e17a50837/index.html",
+  "files": {
+    "app": "app.json",
+    "map": "map.json",
+    "runtime": "app.js",
+    "auth": "standalone-auth.js"
+  },
+  "portalUrl": "https://www.arcgis.com",
+  "appId": "276XDXNCH18pKEM2",
+  "deploymentUrl": "https://ismaelinredlands.github.io/redlands-assessor-portal/"
+}

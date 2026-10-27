@@ -1,0 +1,209 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a17e5f8bd5-layer-2",
+      "title": "Redlands Parcels",
+      "url": "https://services.arcgis.com/FLM8UAw9y5MmuVTV/arcgis/rest/services/Parcels_APN_Only/FeatureServer/1",
+      "itemId": "482b3139f33d480aab3a2076dcbe569d",
+      "layerType": "ArcGISFeatureLayer",
+      "blendMode": "normal",
+      "layerDefinition": {
+        "fieldConfigurations": [
+          {
+            "name": "SiteNumber",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Acres",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Inhabited",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "CENSUSBL",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "CENSUSTR",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "created_date",
+            "fieldFormat": {
+              "type": "date-time",
+              "dateStyle": "short",
+              "hour12": "always",
+              "timeStyle": "short"
+            }
+          },
+          {
+            "name": "last_edited_date",
+            "fieldFormat": {
+              "type": "date-time",
+              "dateStyle": "short",
+              "hour12": "always",
+              "timeStyle": "short"
+            }
+          },
+          {
+            "alias": "SHAPE.STArea()",
+            "name": "Shape__Area",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "alias": "SHAPE.STLength()",
+            "name": "Shape__Length",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          }
+        ],
+        "drawingInfo": {
+          "labelingInfo": [
+            {
+              "labelExpression": "[APN]",
+              "labelExpressionInfo": {
+                "expression": "$feature[\"APN\"]"
+              },
+              "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+              "maxScale": 0,
+              "minScale": 5000,
+              "repeatLabel": true,
+              "symbol": {
+                "type": "esriTS",
+                "color": [
+                  40,
+                  40,
+                  40,
+                  255
+                ],
+                "font": {
+                  "family": "Avenir Next",
+                  "size": 11
+                },
+                "horizontalAlignment": "center",
+                "kerning": true,
+                "haloColor": [
+                  255,
+                  255,
+                  255,
+                  255
+                ],
+                "haloSize": 1,
+                "rotated": false,
+                "text": "",
+                "verticalAlignment": "baseline",
+                "xoffset": 0,
+                "yoffset": 0,
+                "angle": 0
+              }
+            }
+          ],
+          "renderer": {
+            "type": "simple",
+            "symbol": {
+              "type": "esriSFS",
+              "color": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outline": {
+                "type": "esriSLS",
+                "color": [
+                  0,
+                  114,
+                  188,
+                  255
+                ],
+                "width": 1,
+                "style": "esriSLSSolid"
+              },
+              "style": "esriSFSNull"
+            }
+          }
+        }
+      },
+      "popupInfo": {
+        "popupElements": [
+          {
+            "type": "expression",
+            "expressionInfo": {
+              "expression": "var rows = [\n  ['Address', $feature.Address],\n  ['Use code', $feature.RedlandsUseCode],\n  ['Land use', $feature.LANDUSE],\n  ['Zoning', $feature.Zoning],\n  ['Flood zone', $feature.FloodZone],\n  ['Fire hazard', $feature.FireHazard],\n  ['Acres', Text($feature.Acres, '#,###.##')]\n];\nvar html = '<div style=\"font-family:Arial,sans-serif;line-height:1.35;\"><table style=\"border-collapse:collapse;width:100%;\">';\nfor (var r in rows) {\n  var value = DefaultValue(rows[r][1], '—');\n  html += '<tr><th style=\"text-align:left;color:#4b5f72;border-bottom:1px solid #edf0f2;padding:5px 8px 5px 0;white-space:nowrap;\">' + rows[r][0] + '</th><td style=\"border-bottom:1px solid #edf0f2;padding:5px 0;\">' + value + '</td></tr>';\n}\nhtml += '</table></div>';\nreturn { type: 'text', text: html };",
+              "returnType": "dictionary"
+            }
+          }
+        ],
+        "fieldInfos": [],
+        "title": "Parcel {APN}"
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "streets-vector-base-layer",
+        "opacity": 1,
+        "title": "World Streets",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/de26a3cf4cc9451298ea173c4b324736/resources/styles/root.json"
+      }
+    ],
+    "title": "Streets"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -13068740.260894509,
+        "ymin": 4029178.297739348,
+        "xmax": -13027553.500323996,
+        "ymax": 4089474.0514257764
+      }
+    }
+  }
+}
